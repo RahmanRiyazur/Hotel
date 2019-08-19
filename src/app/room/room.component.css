@@ -1,0 +1,205 @@
+::ng-deep .no-line .mat-form-field-underline {
+    display: none;
+  }
+  ::ng-deep .mat-sort-header-arrow {
+    opacity:1!important;
+    transform: translateY(0px)!important;
+    color: #af8635;
+}
+.book-header{
+    width:500px;
+    height:50px;
+    transform:translate(20%,285%);
+    
+    
+}
+.book-header h1{
+    font-weight: 700;
+    color: #1c1c1c;
+    letter-spacing: .075rem;
+    font-size: 60px; 
+    font-family: "Josefin Sans",sans-serif;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+    width: 578px;
+}
+.noline{
+    margin-right:20px;
+    
+}
+.sort-header{
+
+    top:50%;
+    height:82px;
+    margin-top:50px;
+    transform:translate(1%,232%);
+    overflow: hidden;
+    width:1163px;
+    background:#eaeaea;
+    
+       
+}
+.room-type{
+    float: left;
+    margin-right:20px;
+}
+.room-view{
+    float: left;
+    margin-right:20px;
+}
+.price-tag{
+    float: right;
+    
+}
+.price-tag .txt{
+    letter-spacing: .1px;
+    font-size: 20px;
+    font-weight: 400!important;
+    font-family: Lato,"Josefin Sans",sans-serif;
+    margin-right: 10px!important;
+    line-height: 1;
+    color: #666;
+}
+.price-tag span{
+    letter-spacing: .1px;
+    color: #1c1c1c;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: Lato,"Josefin Sans",sans-serif;
+    line-height: 54px;
+    margin-right: 10px;
+    height:50px;
+    
+    
+}
+.mat-sort-header-container {
+    align-items: center;
+  }
+.container{
+    height: 400px;
+    border: 1px solid #8e6741;
+    transform: translateY(50%);
+    margin: 0px 113px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 4px 4px #8e6741;
+    float: left;
+    clear: both;
+    
+}
+.container .row{
+    height: 343px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.col-md-9{
+    padding:30px;
+    height: 341px;
+    flex:0 0 75%;
+    margin:0px 0px 0px 0px;
+    position: relative;
+    
+}
+.col-md-9 .row{
+    height: 100%;
+    width:302px;
+    margin-right: 0px;
+    margin-left:0px; 
+    
+}
+.roomImage{
+    width: 350px;
+    position: relative;
+    min-height: 281px;
+    float: left;
+}
+.roomImage img{
+    height: 220px;
+    width: 318px;
+    position: absolute;
+    top: 42px;
+}
+.roomDetails{
+    border-left: 3px solid #8e6741;
+    display: flex;
+    flex-wrap: wrap;
+    display: inline-block;
+    margin:0px 0px 0px 0px;
+    width: 420px;
+    height: 100%;
+    padding-left: 20px;
+    line-height: 31px; 
+    font-family: sans-serif;
+}
+.roomDetails h1{
+    margin: 0px;
+}
+.roomsBooked{
+    font-size:17px;
+    color: #976736;
+}
+.guestNumber{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+ul li{
+    font-size: 18px;
+    color: #333;
+    display: inline-block;
+    height: 38px;
+    width: 100%;
+}
+li img{
+    float: left;
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+}
+li p{
+    text-align: right; 
+    display:inline-block;
+    padding: 0;
+    margin: 2px 0px 0px 0px;
+}
+.details{
+    margin: 15px 0px 0px 0px;
+}
+.details a{
+    font-size: 18px;
+    color: #333;
+    letter-spacing: .5px;
+    text-decoration: underline;
+}
+.details a:hover{
+    color: #976736;
+}
+.col-md-3{
+    position:absolute;
+    display: inline-block;
+    height: 397px;
+    left: 923px;
+    top: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(230, 230, 230);
+}
+.col-md-3 .price-panel{
+    padding:30px;
+    
+}
+strong{
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700;
+    font-family: Lato,"Josefin Sans",sans-serif;
+}
+

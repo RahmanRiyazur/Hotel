@@ -1,0 +1,110 @@
+<div class="container datepicker">
+  <!-- <p>Reserve a Room</p> -->
+  <div class="heading">
+    <p>Reserve A Room</p>
+    <div class="select-date">
+      <div class="date-input">
+        <div class="check-in">
+          Check In
+        </div>
+        <div class="date-value" (click)="picker.open()">
+          <!-- <input type="hidden" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker> -->
+          <sat-datepicker-toggle hidden="ture" [for]="picker"></sat-datepicker-toggle>
+          <div class="date-d">
+            <input hidden="true"  [satDatepicker]="picker" (dateInput)="addEvent($event)" [min]="minDate"
+              [max]="maxDate">
+            <sat-datepicker  [dateClass]="dateClass" touchUi #picker [rangeMode]="true">
+            </sat-datepicker>
+
+
+            {{ today | date:'d'}}
+
+          </div>
+          <div class="date-dy">
+            {{today | date:'MMM, yyy'}}
+
+          </div>
+        </div>
+
+        <div class="check-out">
+          Check out
+        </div>
+        <div class="date-valueco">
+          <div class="date-dco">
+            {{ tmrwd | date:'d'}}
+          </div>
+          <div class="date-dyco">
+            {{ tmrwd | date:'MMM, yyy'}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container another mt-2">
+  <p>Random</p>
+</div>
+<app-carousel></app-carousel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container datepicker">
+  <p>Reserve a Room</p>
+  <div class="heading">
+    <p>Reserve A Room</p>
+    <div class="select-date">
+      <div class="date-input">
+        <div class="check-in">
+          Check In
+        </div>
+        <div class="date-value">
+          <div class="date-d">
+            {{ today | date:'d'}}
+          </div>
+          <div class="date-dy">
+            {{today | date:'MMM, yyy'}}
+
+          </div>
+        </div>
+
+        <div class="check-out">
+          Check out
+        </div>
+        <div class="date-valueco">
+          <div class="date-dco">
+            {{ tmrwd }}
+          </div>
+          <div class="date-dyco">
+            {{tmrwdm }},
+            {{ tmrwdy }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container another mt-2">
+  <p>Random</p>
+</div> -->

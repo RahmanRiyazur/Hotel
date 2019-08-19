@@ -1,0 +1,128 @@
+<div class="book-header">
+  <h1>BOOK YOUR STAY</h1>
+</div>
+<div class="sort-header container-fluid">
+  <div class="room-view">
+    <mat-form-field class="no-line">
+      <mat-label>All Room Views</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option value="All Room Types">All Room Views</mat-option>
+        <mat-option *ngFor="let rooms of roomView | async" [value]="rooms.view">
+          {{rooms.view}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div class="room-type">
+    <mat-form-field class="no-line">
+      <mat-label>All Room Types</mat-label>
+      <mat-select [(value)]="selected1">
+        <mat-option  value="All Room Types">All Room Types</mat-option>
+        <mat-option *ngFor="let rooms of roomType | async" [value]="rooms.type">
+          {{rooms.type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div matSort (matSortChange)="sortData($event)" matSortDisableClear="true">
+
+    <div class="price-tag" mat-sort-header="price" start="desc" disableClear="true">
+      <div class="txt">Sort by:</div>
+      <span calss="cat">Price</span>
+
+    </div>
+
+
+  </div>
+</div>
+<div *ngFor="let rooms of sortedData | filter:selected1:'type' | filter:selected:'view'">
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 p-20">
+
+        <div class="roomImage">
+          <img src="../assets/img/card.jpg">
+        </div>
+        <div class="roomDetails">
+          <!-- <h1>Deluxe Room - Lower Floor</h1> -->
+          <h1>{{ rooms.type }}-{{rooms.view}}</h1>
+          <span class="roomsBooked">42 rooms booked in the last 24 hours</span>
+          <p class="guestNumber"> {{ rooms.guests }} </p>
+          <div class="amenities">
+            <ul class="list">
+              <li class="list-items">
+                <img src="../assets/img/icon-service.png">
+                <p>From 30 sqm</p>
+              </li>
+              <li class="list-items">
+                <img src="../assets/img/shower.png">
+                <p> Glass-enclosed shower</p>
+              </li>
+              <li class="list-items">
+                <img src="../assets/img/lower.png">
+                <p>Lower Floor</p>
+              </li>
+            </ul>
+          </div>
+          <p class="details">
+            <a href="#">View room details</a>
+          </p>
+
+        </div>
+        <div class="col-md-3 p-0">
+          <div class="price-panel">
+            <h5 class="txt-lg-lr lh-30 ls-sm txt-black d-inline-block d-sm-block align-middle m-0 mr-1">From</h5>
+            <div class="room-price d-inline-block d-sm-block align-middle mr-1">
+              <strong>${{ rooms.price | convert}}</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="roomImage">
+            <img src="../assets/img/card.jpg" >
+          </div>
+          <div class="roomDetails">
+            <h1>Deluxe Room - Lower Floor</h1>
+            <span class="roomsBooked">42 rooms booked in the last 24 hours</span>
+            <p class="guestNumber">Up to 3 guests</p>
+            <div class="amenities">
+              <ul class="list">
+                <li class="list-items">
+                  <img src="../assets/img/icon-service.png">
+                  <p>From 30 sqm</p>
+                </li>
+                <li class="list-items">
+                  <img src="../assets/img/shower.png">
+                  <p> Glass-enclosed shower</p>
+                </li>
+                <li class="list-items">
+                  <img src="../assets/img/lower.png">
+                  <p>Lower Floor (L2 to L9, facing the highway or The Shoppes)</p>
+                </li>
+              </ul>
+            </div>
+            <p class="details">
+              <a href="#">View room details</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
